@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> User </title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    </head>
+    
+    
+    <body  style="background-color:gray ;">
+        
+        <nav class="navbar navbar-inverse" style="background-color: rgba(47, 23, 15, 0.9);">
+            <div class="container">
+                <div class="navbar-header">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#monMenu">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                    <a href="/" class="navbar-brand">Accueil</a>
+                </div>
+                <div class="collapse navbar-collapse" id="monMenu">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/restaurants">Restaurant</a></li>
+                        <li><a href="">Produits</a></li>
+                        <li><a href="/about">A propos</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+        </nav>
+
+<div>
+  <h3>Bienvenu cher(e) client(e)</h3>
+</div>
+<div style="text-align: center;">
+  <h1>PASSEZ VOS COMMANDES</h1>
+</div>
+
+ <div class="container">
+   <div class="row">
+     <div class="col-md-6">
+       <img class="img-responsive" src="img/img1.jpg" style="height: 200px; width: 500px; border-radius:8px;">
+       <div style="text-align: center; color: beige">
+          <h4>Café simple</h4>
+          <h5>Prix : 500fcfa</h5>
+       </div>
+     </div>
+
+     <div class="col-md-6">
+       <img class="img-responsive" src="img/img2.jpg" style="height: 200px; width: 500px; border-radius:8px;">
+        <div style="text-align: center; color: beige">
+          <h4>Café + lait/chocolat</h4>
+          <h5>Prix : 1000fcfa</h5>
+        </div>
+     </div>
+   </div>
+ </div>
+  {% if success %}
+	<div class="modal fade" id="reussite" style="text-align:center">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header" style="border-bottom: none">
+            <h5 style="color: limegreen;font-size: 1.2em;font-family:Bell MT">succès</h5>
+					</div>
+					<div class="modal-body" style="margin-top: -15px;font-size: 1.3em">
+						<p>reservation effectuée avec succès<br>nous vous contacterons pour la suite</p>
+						<a class="btn btn-primary" data-dismiss="modal" data-target="#reussite">ok</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$("#reussite").modal("show");
+			});
+		</script>
+  {% endif %}
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-9 mx-auto container">
+          <div class="text-center rounded">
+            <form method="post" action="/commandes" >
+              <div class="form-group" style="font-size: 20px;">
+                <label for="name">Votre Nom Svp</label>
+                <input type="text" id="
+                name" name="name" class="form-control" required>
+                <label for="phone">Telephone</label>
+                <input type="text" id="
+                phone" name="phone" class="form-control">
+                <label for="heure">Heure</label>
+                  <input type="time" name ="heure" required class="form-control">
+                <label for="date">Date</label>
+                  <input type="date" name="date" required class="form-control">
+              </div>
+               <div class=" mx-auto">
+                <input type="submit" class="btn btn-primary btn-xl" style="background-color: rgba(47, 23, 15, 0.9);" value="commander">
+          </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+       
+        
+        <div style="height:50px; background-color:maroon; text-align: center;">
+          <footer>
+              <h5 style="padding-top:20px;">© 2019 SAMAKE MOHAMED</h5>
+          </footer>
+        </div>   
+                
+        
+        
+    </body>
+
+</html>
